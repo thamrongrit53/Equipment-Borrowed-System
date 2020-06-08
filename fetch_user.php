@@ -27,7 +27,17 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["email"].'</td>
     <td>'.$row["posi"].'</td>
     <td>'.$row["tel"].'</td>
-     <td>'.$row["status"].'</td>
+     <td>
+     	<form action="update_status.php?id_u='.$row["id_u"].'" method="POST">
+				<select class="form-control" name="status">
+     			<option>'.$row["status"].'</option>
+                <option>ADMIN</option>
+                <option>MANAGER</option>
+                <option>USER</option>
+              </select>
+       <button class="btn btn-success" type="submit" value="submit" style="margin-top: 10px;">บันทึก</button>
+     	</form>
+     	</td>
    </tr>
   ';
  }
@@ -39,3 +49,4 @@ else
 }
 
 ?>
+
