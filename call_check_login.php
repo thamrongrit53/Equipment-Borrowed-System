@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  	include('condb.php');
+  	require_once('condb.php');
   	mysqli_set_charset($condb,"utf8");
 
 	 $username =$_POST['username'];
@@ -8,7 +8,7 @@
      $phonenumber=$_POST['phonenumber'];
      $phone = mysqli_real_escape_string($condb,$phonenumber);
 
-	$strSQL="SELECT * FROM `tb_user` WHERE `name_u`='$username' AND tel='$phonenumber'";
+	$strSQL="SELECT * FROM `tb_user` WHERE `name_u`='$user' AND tel='$phone'";
 	$objQuery=mysqli_query($condb,$strSQL);
 	print_r($objQuery);
 
@@ -20,9 +20,9 @@
 	}
 	else
 	{
-			$_SESSION["username"] = $objResult["username"];
+			$_SESSION["name_u"] = $objResult["name_u"];
 			$_SESSION["status"] = $objResult["status"];
-  			setcookie($username, md5($objResult["username"]), time() + (86400 * 30), "/");
+  			setcookie($username, md5($objResult["name_u"]), time() + (86400 * 30), "/");
 
 			if($objResult["status"] == "ADMIN")
 			{

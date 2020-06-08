@@ -1,3 +1,7 @@
+<?php
+require_once('condb.php');
+require_once('session_user.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=K2D:wght@700&display=swap" rel="stylesheet">
-
+  <style type="text/css">
+   footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+  </style>
 </head>
 <body style="height:1500px; font-family: 'K2D', sans-serif;">
  <?php 
@@ -27,7 +40,11 @@ require_once('navbar.php');
    </div>
   </div>
 </div>
-
+ <footer class="py-4 bg-dark text-white-50" style="margin-top: 20px;">
+    <div class="container text-center">
+      <small>Copyright &copy; SBAC  &nbsp;by &nbsp;ไม่นอน</small>
+    </div>
+  </footer>
 </body>
 </html>
 

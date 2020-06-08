@@ -10,5 +10,4 @@ $condb = new mysqli($servername, $username, $password,$database);
 if ($condb->connect_error) {
     die("Connection failed: " . $condb->connect_error);
 }
-echo "connection successfull";
 ?>
