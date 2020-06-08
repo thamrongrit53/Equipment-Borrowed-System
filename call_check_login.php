@@ -26,6 +26,7 @@
 
 			if($objResult["status"] == "ADMIN")
 			{
+				
 				header("location:admin_sys.php");
 			}
 			else if ($objResult["status"] == "USER")
@@ -38,4 +39,3 @@
 	};
 	mysqli_close($condb);
 ?>
-lfkjjp;dpjpdppd
