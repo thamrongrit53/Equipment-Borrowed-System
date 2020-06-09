@@ -25,7 +25,7 @@ require_once('session_admin.php');
 }
     button{
       width: 350px;
-      height: 100px;
+      height: 200px;
     }
   </style>
 </head>
@@ -44,30 +44,38 @@ require_once('navbar.php');
 <div class="container">
   <div class="row" style="margin-top: 20px;">
     <div class="col-md-4"> 
-    <div class="dropdown">
+    <div class="dropdown"> 
+
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-    ให้สิทธิ์การใช้งาน
+         <img src="img/png/designer.png" style="width: 80px;height: 80px;">
+<br>ให้สิทธิ์การใช้งาน
     </button>
     <div class="dropdown-menu">
+
       <a class="dropdown-item" href="add_user.php">ลงทะเบียนผู้ใช้งาน/ให้สิทธิ์</a>
     </div>
   </div>
     </div> 
      <div class="col-md-4">  
           <div class="dropdown">
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">   
+      <img src="img/png/inventory.png" style="width: 80px;height: 80px;">
+<br>
     บันทึกข้อมูล/จำนวนเครื่องมือ/วัสดุสิ้นเปลือง</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
+      <a class="dropdown-item" href="add_type_tool.php">เพิ่มชื่อประเภท/หมวดหมู่</a>
+      <a class="dropdown-item" href="add_tool.php">เพิ่มรายการชื่อเครื่องมือ/อุปกรณ์ใหม่</a>
+      <a class="dropdown-item" href="#">เพิ่ม/ลด จำนวนวัสดุสิ้นเปลือง</a>
+      <a class="dropdown-item" href="report_tool_store.php">รายการอุปกรณ์และวัสดุสิ้นเปลือง</a>
     </div>
   </div>
     </div> 
      <div class="col-md-4"> 
              <div class="dropdown">
+ 
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-    อุปกรณ์ชำรุด</button>
+                       <img src="img/png/study1.png" style="width: 80px;height: 80px;">
+<br>อุปกรณ์ชำรุด</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Link 1</a>
       <a class="dropdown-item" href="#">Link 2</a>
@@ -79,8 +87,10 @@ require_once('navbar.php');
   <div class="row" style="margin-top: 20px;">
     <div class="col-md-4">  
               <div class="dropdown">
+
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-   ส่งซ่อมเครื่องมือ/อุปกรณ์ </button>
+                        <img src="img/png/company.png" style="width: 80px;height: 80px;">
+<br> ส่งซ่อมเครื่องมือ/อุปกรณ์ </button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Link 1</a>
       <a class="dropdown-item" href="#">Link 2</a>
@@ -90,8 +100,10 @@ require_once('navbar.php');
     </div> 
      <div class="col-md-4">
              <div class="dropdown">
+
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-    ปรับสถานะเครื่องมือ/อุปกรณ์ที่ซ่อมเสร็จแล้ว</button>
+                       <img src="img/png/study.png" style="width: 80px;height: 80px;">
+<br> ปรับสถานะเครื่องมือ/อุปกรณ์ที่ซ่อมเสร็จแล้ว</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Link 1</a>
       <a class="dropdown-item" href="#">Link 2</a>
@@ -101,8 +113,10 @@ require_once('navbar.php');
     </div> 
      <div class="col-md-4">  
               <div class="dropdown">
+
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-    จำหน่ายเครื่องมือ/อุปกรณ์</button>
+                        <img src="img/png/strategy.png" style="width: 80px;height: 80px;">
+<br>  จำหน่ายเครื่องมือ/อุปกรณ์</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Link 1</a>
       <a class="dropdown-item" href="#">Link 2</a>
@@ -115,8 +129,10 @@ require_once('navbar.php');
 <div class="row" style="margin-top: 20px;">
   <div class="col-md-4">
             <div class="dropdown">
+ 
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-    รายงานทั้งหมด</button>
+                    <img src="img/png/work.png" style="width: 80px;height: 80px;">
+<br>   รายงานทั้งหมด</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Link 1</a>
       <a class="dropdown-item" href="#">Link 2</a>

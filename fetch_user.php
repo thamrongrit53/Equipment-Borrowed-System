@@ -36,6 +36,7 @@ if(mysqli_num_rows($result) > 0)
                 <option>USER</option>
               </select>
        <button class="btn btn-success" type="submit" value="submit" style="margin-top: 10px;">บันทึก</button>
+       <button class="btn btn-danger" style="margin-top: 10px;"><a href="delete_user.php?id_u='.$row["id_u"].'">ลบ</a></button>
      	</form>
      	</td>
    </tr>
