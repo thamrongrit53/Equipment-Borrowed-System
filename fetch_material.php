@@ -7,11 +7,11 @@ require_once('session_admin.php');
 { 
  $search = mysqli_real_escape_string($condb, $_POST["query"]);
  $query = "
-  SELECT * FROM tb_tool WHERE type_t LIKE '%".$search."%'";
+  SELECT * FROM tb_tool WHERE type_t='วัสดุสิ้นเปลือง' AND type_t LIKE '%".$search."%'";
 }
 else
 {
- $query = "SELECT * FROM `tb_tool` ORDER BY code DESC";
+ $query = "SELECT * FROM `tb_tool` WHERE type_t='วัสดุสิ้นเปลือง'";
 }
 $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)
@@ -20,7 +20,7 @@ if(mysqli_num_rows($result) > 0)
   <div class="table-responsive">
    <table class="table table bordered">
     <tr>
-     <th>ชื่ออุปกรณ์</th>
+     <th>ชื่อวัสดุ</th>
      <th>คำอธิบาย</th>
     <th>ประเภท</th>
     <th>code</th>

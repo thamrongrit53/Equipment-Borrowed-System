@@ -40,6 +40,8 @@ require_once('navbar.php');
   </div>  
   <div class="row">
     <div class="col-md-3">
+         <h3>เพิ่มประเภทอุปกรณ์</h3>
+
        <form action="add_type_tool_SQL.php" method="POST">
     <label>รหัสประเภท</label>
     <input type="text" name="id_type" class="form-control">
@@ -52,7 +54,8 @@ require_once('navbar.php');
   </form>
     </div>
     <div class="col-md-9">
-      
+         <h3 class="text-center">ประเภทอุปกรณ์</h3>
+
       <div id="result"></div>
 
     </div>

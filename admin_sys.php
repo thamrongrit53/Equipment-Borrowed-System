@@ -65,7 +65,7 @@ require_once('navbar.php');
     <div class="dropdown-menu">
       <a class="dropdown-item" href="add_type_tool.php">เพิ่มชื่อประเภท/หมวดหมู่</a>
       <a class="dropdown-item" href="add_tool.php">เพิ่มรายการชื่อเครื่องมือ/อุปกรณ์ใหม่</a>
-      <a class="dropdown-item" href="#">เพิ่ม/ลด จำนวนวัสดุสิ้นเปลือง</a>
+      <a class="dropdown-item" href="report_material_store.php">เพิ่ม/ลด จำนวนวัสดุสิ้นเปลือง</a>
       <a class="dropdown-item" href="report_tool_store.php">รายการอุปกรณ์และวัสดุสิ้นเปลือง</a>
     </div>
   </div>
