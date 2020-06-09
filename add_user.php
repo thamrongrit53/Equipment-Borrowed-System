@@ -23,7 +23,11 @@ require_once('session_admin.php');
    color: white;
    text-align: center;
 }
+a{
+	color: white;
+}
   </style>
+}
 </head>
 <body style="height:1500px; font-family: 'K2D', sans-serif;">
  <?php 
@@ -57,8 +61,9 @@ require_once('navbar.php');
                 <option>USER</option>
               </select>
      <br>
+          <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
+</button>
      <button class="btn btn-success" type="submit" value="submit">บันทึก</button>
-
     </form>
   	</div>
    <div class="col-md-9">
