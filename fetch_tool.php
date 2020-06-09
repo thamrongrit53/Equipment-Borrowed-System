@@ -48,9 +48,6 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["location"].'</td>
     <td>'.$row["status"].'</td> 
     <td><a target="_blank" href="img_tool/'.$row["img"].'"><img src="img_tool/'.$row["img"].'" style="width: 100px;height: 150px;"></td>
-     <td>
-       <button class="btn btn-danger" style="margin-top: 10px;"><a href="delete_type_tool.php?id_type='.$row["id_type"].'">ลบ</a></button>
-     	</td>
    </tr>
   ';
  }

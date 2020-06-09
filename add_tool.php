@@ -46,7 +46,9 @@ require_once('navbar.php');
 $result = mysqli_query($condb,$query);
    ?>
     <div class="col-md-12">
-              <h3 align="center">เพิ่มอุปกรณ์และวัสดุสิ้นเปลือง</h3><br />
+              <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
+</button>
+     <h3 align="center">เพิ่มอุปกรณ์และวัสดุสิ้นเปลือง</h3><br />
        <form action="add_tool_SQL.php" method="POST" enctype="multipart/form-data">
   <label>ชื่อประเภท</label>
     <select class="form-control" name="name_type">
@@ -85,8 +87,6 @@ $result = mysqli_query($condb,$query);
       <label>รูป</label>
       <input type="file" name="file" class="form-control">
     <br>
-     <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button>
      <button class="btn btn-success" type="submit" value="submit" id="submit" name="submit">บันทึก</button>
   </form>
     </div>
