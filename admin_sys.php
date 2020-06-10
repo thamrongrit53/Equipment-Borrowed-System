@@ -41,7 +41,7 @@ require_once('navbar.php');
   </div>  
 </div>
 
-<div class="container">
+<div class="container" style="margin-bottom: 100px;">
   <div class="row" style="margin-top: 20px;">
     <div class="col-md-4"> 
     <div class="dropdown"> 
@@ -64,9 +64,9 @@ require_once('navbar.php');
     บันทึกข้อมูล/จำนวนเครื่องมือ/วัสดุสิ้นเปลือง</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="add_type_tool.php">เพิ่มชื่อประเภท/หมวดหมู่</a>
-      <a class="dropdown-item" href="add_tool.php">เพิ่มรายการชื่อเครื่องมือ/อุปกรณ์ใหม่</a>
+      <a class="dropdown-item" href="add_tool.php">เพิ่มรายการอุปกรณ์ใหม่/วัสดุสิ้นเปลือง</a>
       <a class="dropdown-item" href="report_material_store.php">เพิ่ม/ลด จำนวนวัสดุสิ้นเปลือง</a>
-      <a class="dropdown-item" href="report_tool_store.php">รายการอุปกรณ์และวัสดุสิ้นเปลือง</a>
+      <a class="dropdown-item" href="report_tool_store.php">เพิ่ม/ลด จำนวนอุปกรณ์</a>
     </div>
   </div>
     </div> 
@@ -142,7 +142,7 @@ require_once('navbar.php');
   </div>
 </div>
 </div>
- <footer class="py-4 bg-dark text-white-50" style="margin-top:20px;">
+ <footer class="py-4 bg-dark text-white-50" style="margin-top:100px;">
     <div class="container text-center">
       <small>Copyright &copy; SBAC &nbsp;by &nbsp;ไม่นอน</small>
     </div>

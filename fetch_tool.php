@@ -11,7 +11,7 @@ require_once('session_admin.php');
 }
 else
 {
- $query = "SELECT * FROM `tb_tool` ORDER BY code DESC";
+ $query = "SELECT * FROM `tb_tool` WHERE type_t!='วัสดุสิ้นเปลือง' ORDER BY code DESC";
 }
 $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)
@@ -30,6 +30,7 @@ if(mysqli_num_rows($result) > 0)
     <th>สถานที่เก็บ</th>
     <th>สถานะ</th>
     <th>รูป</th>
+    <th></th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -46,6 +47,7 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["location"].'</td>
     <td>'.$row["status"].'</td> 
     <td><a target="_blank" href="img_tool/'.$row["img"].'"><img src="img_tool/'.$row["img"].'" style="width: 100px;height: 150px;"></td>
+     <td><button type="button" class="btn btn-primary"><a href="edit_tool.php?code='.$row["code"].'">แก้ไข/ลบ</a>
    </tr>
   ';
  }

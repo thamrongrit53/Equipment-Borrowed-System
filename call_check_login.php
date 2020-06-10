@@ -10,12 +10,12 @@
 
 	$strSQL="SELECT * FROM `tb_user` WHERE `name_u`='$user' AND tel='$phone'";
 	$objQuery=mysqli_query($condb,$strSQL);
-	print_r($objQuery);
 
 	$objResult=mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
  	
 	if(!$objResult)
-	{
+	{		
+	
 			echo "$user and $phone Incorrect!";
 	}
 	else
@@ -35,6 +35,10 @@
 			}else if($objResult["status"] == "MANAGER")
 			{
 				header("location:manager_sys.php");
+			}else{
+				 echo "Please Login!";
+    			sleep(5);
+				header("location:home.php");
 			};
 	};
 	mysqli_close($condb);

@@ -39,10 +39,12 @@ require_once('navbar.php');
   <div class="jumbotron">
     <h1>Equipment Borrowed System(EBS)=>admin</h1>      
   </div>  
+  <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a></button>
 </div>
+    
 
 <div class="container">
-  <div class="row" style="margin-top: 20px;">
+  <div class="row" style="margin-top: 20px;"> 
   	<div class="col-md-3">
   		<h3>ลงทะเบียนผู้ใช้งาน</h3>
   		 <form action="add_user_SQL.php" method="POST">
@@ -61,8 +63,8 @@ require_once('navbar.php');
                 <option>USER</option>
               </select>
      <br>
-          <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button>
+         
+
      <button class="btn btn-success" type="submit" value="submit">บันทึก</button>
     </form>
   	</div>

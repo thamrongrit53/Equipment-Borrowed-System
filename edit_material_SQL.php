@@ -2,8 +2,6 @@
 require_once('condb.php');
 require_once('session_admin.php');
 
-mysqli_set_charset($condb,"utf8");
-
 $name_type = $_POST['name_type'];
 $name_tool = $_POST['name_tool'];
 $detail_tool=$_POST['detail_tool'];
@@ -21,15 +19,11 @@ $target = "img_tool/".basename($image);
      }else{
         $msg = "Failed to upload image";
      }
-$query = "SELECT id_type FROM `type_tool` WHERE type_t='$name_type'";
-$result = mysqli_query($condb,$query);
-$id_code = mysqli_fetch_array($result);
-$encode=$id_code["id_type"]."-".$code_tool;
 
- $sql="INSERT INTO `tb_tool`(`name_t`,detail,code,type_t,unit,m_unit,price,import_date,location,status,img)VALUES('$name_tool','$detail_tool','$encode','$name_type','$unit','$unit_num','$price','$date_import','$location','$status','$image')";
+ $sql="UPDATE`tb_tool` SET`name_t`='$name_tool',detail='$detail_tool',code='$code_tool',type_t='$name_type',unit='$unit',m_unit='$unit_num',price='$price',import_date='$date_import',location='$location',status='$status',img='$image' WHERE code='$code_tool'";
   mysqli_query($condb,$sql);   
 	if ($sql){
-     header("location:add_tool.php");
+     header("location:report_material_store.php");
       			}else{
      header("location:error_process.php");
       			}

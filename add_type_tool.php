@@ -37,7 +37,9 @@ require_once('navbar.php');
 <div class="container" style="margin-top:50px">
   <div class="jumbotron">
     <h1>Equipment Borrowed System(EBS)=>admin</h1>      
-  </div>  
+  </div>    
+  <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
+</button>  
   <div class="row">
     <div class="col-md-3">
          <h3>เพิ่มประเภทอุปกรณ์</h3>
@@ -48,8 +50,7 @@ require_once('navbar.php');
     <label>ชื่อประเภท</label>
     <input type="text" name="name_type" class="form-control">
     <br>
-     <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button>
+ 
      <button class="btn btn-success" type="submit" value="submit">บันทึก</button>
   </form>
     </div>

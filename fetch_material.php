@@ -7,11 +7,11 @@ require_once('session_admin.php');
 { 
  $search = mysqli_real_escape_string($condb, $_POST["query"]);
  $query = "
-  SELECT * FROM tb_tool WHERE type_t='วัสดุสิ้นเปลือง' AND type_t LIKE '%".$search."%'";
+  SELECT * FROM tb_tool WHERE type_t='วัสดุสิ้นเปลือง' AND name_t LIKE '%".$search."%'";
 }
 else
 {
- $query = "SELECT * FROM `tb_tool` WHERE type_t='วัสดุสิ้นเปลือง'";
+ $query = "SELECT * FROM `tb_tool` WHERE type_t='วัสดุสิ้นเปลือง' ORDER BY code DESC";
 }
 $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)
@@ -30,6 +30,7 @@ if(mysqli_num_rows($result) > 0)
     <th>สถานที่เก็บ</th>
     <th>สถานะ</th>
     <th>รูป</th>
+    <th></th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -46,7 +47,13 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["location"].'</td>
     <td>'.$row["status"].'</td> 
     <td><a target="_blank" href="img_tool/'.$row["img"].'"><img src="img_tool/'.$row["img"].'" style="width: 100px;height: 150px;"></td>
+
+     <td><button type="button" class="btn btn-primary"><a href="edit_material.php?code='.$row["code"].'">แก้ไข/ลบ</a>
+    
+  </button>
+  </td> 
    </tr>
+  
   ';
  }
  echo $output;
@@ -57,4 +64,5 @@ else
 }
 
 ?>
+
 

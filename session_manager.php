@@ -1,15 +1,20 @@
-<?php
-  session_start();
+<?php 
+session_start();
   if($_SESSION['name_u'] == "")
   {
     echo "Please Login!";
+    sleep(5);
+    header("location:home.php");
     exit();
   }
 
   if($_SESSION['status'] != "MANAGER")
   {
-    echo "This page for Manager only!";
+    echo "This page for Admin only!";
+    sleep(5);
+    header("location:home.php");
     exit();
   } 
   mysqli_set_charset($condb,"utf8");
-?>
+
+ ?>
