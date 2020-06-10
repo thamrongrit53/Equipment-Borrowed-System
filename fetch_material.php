@@ -11,7 +11,7 @@ require_once('session_admin.php');
 }
 else
 {
- $query = "SELECT * FROM `tb_tool` WHERE type_t='วัสดุสิ้นเปลือง' ORDER BY code DESC";
+ $query = "SELECT * FROM `tb_tool` WHERE type_t='วัสดุสิ้นเปลือง' ORDER BY id_t DESC";
 }
 $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)

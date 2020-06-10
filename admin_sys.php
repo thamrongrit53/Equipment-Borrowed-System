@@ -65,8 +65,8 @@ require_once('navbar.php');
     <div class="dropdown-menu">
       <a class="dropdown-item" href="add_type_tool.php">เพิ่มชื่อประเภท/หมวดหมู่</a>
       <a class="dropdown-item" href="add_tool.php">เพิ่มรายการอุปกรณ์ใหม่/วัสดุสิ้นเปลือง</a>
-      <a class="dropdown-item" href="report_material_store.php">เพิ่ม/ลด จำนวนวัสดุสิ้นเปลือง</a>
-      <a class="dropdown-item" href="report_tool_store.php">เพิ่ม/ลด จำนวนอุปกรณ์</a>
+      <a class="dropdown-item" href="report_material_store.php">แก้ไขข้อมูลวัสดุสิ้นเปลือง</a>
+      <a class="dropdown-item" href="report_tool_store.php">แก้ไขข้อมูลอุปกรณ์</a>
     </div>
   </div>
     </div> 
@@ -75,11 +75,9 @@ require_once('navbar.php');
  
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
                        <img src="img/png/study1.png" style="width: 80px;height: 80px;">
-<br>อุปกรณ์ชำรุด</button>
+<br>บันทึกอุปกรณ์ชำรุด</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
+      <a class="dropdown-item" href="repair_tool.php">แจ้งอุปกรณ์ชำรุด</a>
     </div>
   </div> 
     </div>  
@@ -140,6 +138,21 @@ require_once('navbar.php');
     </div>
   </div>
   </div>
+
+    <div class="col-md-4">
+            <div class="dropdown">
+ 
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    <img src="img/png/test.png" style="width: 80px;height: 80px;">
+<br>  ยืม/คืน/เบิกวัสดุ</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+    </div>
+  </div>
+  </div>
+
 </div>
 </div>
  <footer class="py-4 bg-dark text-white-50" style="margin-top:100px;">

@@ -58,6 +58,7 @@ $result = mysqli_query($condb,$query);
   <label>ชื่อประเภท</label>
     <select class="form-control" name="name_type">
     <option><?php echo $row["type_t"];?></option>
+    
            </select>
        <label>ชื่ออุปกรณ์</label>
     <input type="text" name="name_tool" class="form-control" value="<?php echo $row["name_t"];?>">
