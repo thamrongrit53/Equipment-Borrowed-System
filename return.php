@@ -41,15 +41,14 @@ require_once('navbar.php');
     <div class="row">
        <div class="col-md-12">
             <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button> <h3 align="center">รายการอุปกรณ์/เครื่องมือ</h3><br />
+</button> <h3 align="center">รายการอุปกรณ์/เครื่องมือ/ต้องคืน</h3><br />
    <div class="form-group">
     <div class="input-group">
      <span class="input-group-addon">ค้นหา</span>
-     <input type="text" name="search_text" id="search_text" placeholder="ประเภทอุปกรณ์" class="form-control" />
+     <input type="text" name="search_text" id="search_text" placeholder="code" class="form-control" />
     </div>
    </div>
       <div id="result"></div>
-
     </div>
     </div>
 </div>
@@ -68,7 +67,7 @@ $(document).ready(function(){
  function load_data(query)
  {
   $.ajax({
-   url:"fetch_repair.php",
+   url:"fetch_return_tool.php",
    method:"POST",
    data:{query:query},
    success:function(data)

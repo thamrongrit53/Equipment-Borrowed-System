@@ -14,6 +14,10 @@ $location=$_POST['location'];
 $status=$_POST['status'];
 $image = $_FILES['file']['name'];  
 $target = "img_tool/".basename($image);
+if (empty($image)) {
+  $image= $img=$_GET['img'];
+}
+ 
    if (move_uploaded_file($_FILES['file']['tmp_name'],$target)) {
         $msg = "Image uploaded successfully";
      }else{
@@ -21,8 +25,8 @@ $target = "img_tool/".basename($image);
      }
 
  $sql="UPDATE`tb_tool` SET`name_t`='$name_tool',detail='$detail_tool',code='$code_tool',type_t='$name_type',unit='$unit',m_unit='$unit_num',price='$price',import_date='$date_import',location='$location',status='$status',img='$image' WHERE code='$code_tool'";
-  mysqli_query($condb,$sql);   
-	if ($sql){
+  $query=mysqli_query($condb,$sql);   
+	if ($query){
      header("location:report_material_store.php");
       			}else{
      header("location:error_process.php");

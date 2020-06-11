@@ -27,8 +27,8 @@ $id_code = mysqli_fetch_array($result);
 $encode=$id_code["id_type"]."-".$code_tool;
 
  $sql="INSERT INTO `tb_tool`(`name_t`,detail,code,type_t,unit,m_unit,price,import_date,location,status,img)VALUES('$name_tool','$detail_tool','$encode','$name_type','$unit','$unit_num','$price','$date_import','$location','$status','$image')";
-  mysqli_query($condb,$sql);   
-	if ($sql){
+  $query=mysqli_query($condb,$sql);   
+	if ($query){
      header("location:add_tool.php");
       			}else{
      header("location:error_process.php");

@@ -8,8 +8,8 @@ $tel = $_POST['tel'];
 $status=$_POST['status'];
 
  $sql="INSERT INTO `tb_user`(`name_u`,`posi`,`email`,`tel`,status)VALUES('$name','$position','$email','$tel','$status')";
-  mysqli_query($condb,$sql);   
-	if ($sql){
+  $query=mysqli_query($condb,$sql);   
+	if ($query){
      header("location:add_user.php");
       			}else{
      header("location:error_process.php");

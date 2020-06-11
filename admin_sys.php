@@ -146,9 +146,9 @@ require_once('navbar.php');
                     <img src="img/png/test.png" style="width: 80px;height: 80px;">
 <br>  ยืม/คืน/เบิกวัสดุ</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
+      <a class="dropdown-item" href="lend.php">ยืม</a>
+      <a class="dropdown-item" href="return.php">คืน</a>
+      <a class="dropdown-item" href="withdraw_material.php">เบิกวัสดุ</a>
     </div>
   </div>
   </div>

@@ -53,7 +53,7 @@ $result = mysqli_query($condb,$query);
          <?php  while($row = mysqli_fetch_array($result))
       {
   ?>
-       <form action="edit_material_SQL.php" method="POST" enctype="multipart/form-data"> 
+       <form action="edit_material_SQL.php?img=<?php echo $row["img"];?>" method="POST" enctype="multipart/form-data"> 
   <label>ชื่อประเภท</label>
     <select class="form-control" name="name_type">
     <option><?php echo $row["type_t"];?></option>

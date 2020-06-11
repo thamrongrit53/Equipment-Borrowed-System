@@ -1,4 +1,3 @@
-
 <?php
 require_once('condb.php');
  require_once('session_admin.php');
@@ -50,47 +49,39 @@ $result = mysqli_query($condb,$query);
     <div class="col-md-12">
               <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
 </button>
-     <h3 align="center">แก้ไขเครื่องมือและอุปกรณ์</h3><br />
+     <h3 align="center">แก้ไขวัสดุสิ้นเปลือง</h3><br />
          <?php  while($row = mysqli_fetch_array($result))
       {
   ?>
-       <form action="edit_tool_SQL.php?img=<?php echo $row["img"];?>" method="POST" enctype="multipart/form-data"> 
+       <form action="repair_tool_notify_SQL.php?code=<?php echo $row["code"];?>" method="POST" enctype="multipart/form-data"> 
   <label>ชื่อประเภท</label>
-    <select class="form-control" name="name_type">
-    <option><?php echo $row["type_t"];?></option>
-    
-           </select>
+      <input type="text" name="name_type" class="form-control" value="<?php echo $row["type_t"];?>"readonly>
        <label>ชื่ออุปกรณ์</label>
-    <input type="text" name="name_tool" class="form-control" value="<?php echo $row["name_t"];?>">
+    <input type="text" name="name_tool" class="form-control" value="<?php echo $row["name_t"];?>"readonly>
         <label>คำอธิบาย</label>
-    <textarea  name="detail_tool" class="form-control" value=""><?php echo $row["detail"];?></textarea>
+    <textarea  name="detail_tool" class="form-control" value="" readonly><?php echo $row["detail"];?></textarea>
       <label>code</label>
     <input type="text" name="code_tool" class="form-control" value="<?php echo $row["code"];?>" readonly>
     <label>จำนวน</label>
-    <input type="text" name="unit" class="form-control" value="<?php echo $row["unit"];?>">
+    <input type="text" name="unit" class="form-control" value="<?php echo $row["unit"];?>" readonly>
     <label>หน่วยนับ</label>
-     <input type="text" name="unit_num" class="form-control" value="<?php echo $row["m_unit"];?>">
+     <input type="text" name="unit_num" class="form-control" value="<?php echo $row["m_unit"];?>" readonly>
      <label>ราคาต่อหน่วย</label>
-     <input type="text" name="price" class="form-control" value="<?php echo $row["price"];?>">
+     <input type="text" name="price" class="form-control" value="<?php echo $row["price"];?>" readonly>
      <label>วันที่</label>
-     <input type="date" name="date_import" class="form-control" value="<?php echo $row["import_date"];?>">
+     <input type="date" name="date_import" class="form-control" value="<?php echo $row["import_date"];?>"readonly>
      <label>สถานที่เก็บ</label>
-     <input type="text" name="location" class="form-control" value="<?php echo $row["location"];?>">
+     <input type="text" name="location" class="form-control" value="<?php echo $row["location"];?>"readonly>
      <label>สถานะ</label>
      <select class="form-control" name="status">
         <option><?php echo $row["status"];?></option>
-                <option>พร้อมใช้</option>
                 <option>ชำรุด</option>
-                <option>จำหน่าย</option>
-                <option>ส่งซ่อม</option>
               </select>
       <label>รูป</label>
       <br>
       <img src="img_tool/<?php echo $row["img"];?>" style="width: 100px;height: 150px;">
-      <input type="file" name="file" class="form-control" value="<?php echo $row["img"];?>">
     <br>
      <button class="btn btn-success" type="submit" value="submit" id="submit" name="submit">บันทึก</button>
-      <button class="btn btn-danger" type="button" ><a href="delete_tool.php?code=<?php echo $row["code"];?>">ลบ</a></button>
 
   </form>
    <?php 
