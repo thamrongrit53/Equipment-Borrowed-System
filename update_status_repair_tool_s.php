@@ -71,6 +71,8 @@ $result = mysqli_query($condb,$query);
         <input type="text" name="name_u" class="form-control" value="<?php echo $row["name_u"]; ?>" readonly>
         <label>สถานะ</label>
           <select class="form-control" name="status_r">
+            <option><?php echo $row["status_r"]; ?></option>
+                <option>กำลังซ่อม</option>
                 <option>ซ่อมเส็จแล้ว</option>
               </select>
          <label>วันที่ซ่อมเสร็จ</label>

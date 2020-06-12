@@ -2,10 +2,10 @@
 require_once('condb.php');
 require_once('session_admin.php');
 
-		$status=$_POST['status'];
+		$status=$_POST['status_r'];
 		$code=$_GET["code"];
 
-		if ($status='ซ่อมเส็จแล้ว') {
+		if ($status="ซ่อมเส็จแล้ว") {
 			header("location:update_status_repair_tool_s.php?code=$code");
 		} else {
      

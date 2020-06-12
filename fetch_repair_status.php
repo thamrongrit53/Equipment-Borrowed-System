@@ -28,6 +28,7 @@ if(mysqli_num_rows($result) > 0)
     <th>เบอร์โทร</th>
     <th>ชื่อผู้ส่งซ่อม</th>
     <th>สถานะ</th>
+    <th></th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -41,22 +42,16 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["location_r"].'</td>
     <td>'.$row["tel"].'</td> 
     <td>'.$row["name_u"].'</td>
-     <td>
-  <form action="update_status_repair_tool_SQL.php?code='.$row["code"].'" method="POST">
-        <select class="form-control" name="status_r">
-          <option>'.$row["status_r"].'</option>
-                <option>กำลังซ่อม</option>
-                <option>ซ่อมเส็จแล้ว</option>
-              </select>
-       <button class="btn btn-success" type="submit" value="submit" style="margin-top: 10px;">บันทึก</button>
-      </form>
-
+    <td>'.$row["status_r"].'</td>
+   <td><button type="button" class="btn btn-primary"><a href="update_status_repair_tool_s.php?code='.$row["code"].'">แก้ไขสถานะ</a>
+     </button>
      </td>
    </tr>
   ';
  }
  echo $output;
 }
+
 else
 {
  echo 'ไมพบข้อมูล';

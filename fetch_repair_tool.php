@@ -48,6 +48,8 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["status"].'</td> 
     <td><a target="_blank" href="img_tool/'.$row["img"].'"><img src="img_tool/'.$row["img"].'" style="width: 100px;height: 150px;"></td>
      <td><button type="button" class="btn btn-primary"><a href="notify_repair_tool_num.php?code='.$row["code"].'">แจ้งซ่อม</a>
+     </button>
+     </td>
    </tr>
   ';
  }
