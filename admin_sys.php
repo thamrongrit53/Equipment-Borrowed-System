@@ -127,7 +127,7 @@ require_once('navbar.php');
                     <img src="img/png/work.png" style="width: 80px;height: 80px;">
 <br>   รายงานทั้งหมด</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="report_tool.php">รายการอุปกรณ์/เครื่องมือ</a>
       <a class="dropdown-item" href="#">Link 2</a>
       <a class="dropdown-item" href="#">Link 3</a>
     </div>
