@@ -7,11 +7,11 @@ require_once('session_admin.php');
 { 
  $search = mysqli_real_escape_string($condb, $_POST["query"]);
  $query = "
-  SELECT * FROM lend WHERE code LIKE '%".$search."%'";
+  SELECT * FROM lend WHERE status_l='ยืม' AND code LIKE '%".$search."%'";
 }
 else
 {
- $query = "SELECT * FROM lend ORDER BY id_lend DESC";
+ $query = "SELECT * FROM lend WHERE status_l='ยืม' ORDER BY id_lend DESC";
 }
 $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)
@@ -45,6 +45,7 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["code"].'</td>
     <td>'.$row["date_l"].'</td>
     <td>'.$row["date_s"].'</td>
+    <td>'.$row["name_u"].'</td>
     <td>'.$row["status_l"].'</td> 
      <td><button type="button" class="btn btn-info"><a href="return_tool.php?code='.$row["code"].'">คืน</a>
      </td>

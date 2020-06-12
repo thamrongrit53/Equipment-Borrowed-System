@@ -41,7 +41,7 @@ require_once('navbar.php');
     <div class="row">
        <div class="col-md-12">
     <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button> <h3 align="center">ยืมอุปกรณ์/เครื่องมือ</h3><br />
+</button> <h3 align="center">คืนอุปกรณ์/เครื่องมือ</h3><br />
     <?php
 $code = $_GET["code"];
 mysqli_set_charset($condb,"utf8");
