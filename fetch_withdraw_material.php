@@ -24,7 +24,7 @@ if(mysqli_num_rows($result) > 0)
      <th>คำอธิบาย</th>
     <th>ประเภท</th>
     <th>code</th>
-    <th>จำนวน</th>
+    <th>จำนวนคงเหลือ</th>
     <th>ราคาต่อหน่วย</th>
     <th>วันที่</th>
     <th>สถานที่เก็บ</th>

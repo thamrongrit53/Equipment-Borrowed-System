@@ -101,7 +101,7 @@ require_once('navbar.php');
                        <img src="img/png/study.png" style="width: 80px;height: 80px;">
 <br> ปรับสถานะเครื่องมือ/อุปกรณ์ที่ซ่อมเสร็จแล้ว</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="edit_repair_tool.php">ปรับสถานะ</a>
+      <a class="dropdown-item" href="update_status_repair_tool_.php">ปรับสถานะ</a>
   
     </div>
   </div>  
