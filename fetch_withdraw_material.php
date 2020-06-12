@@ -47,7 +47,7 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["location"].'</td>
     <td>'.$row["status"].'</td> 
     <td><a target="_blank" href="img_tool/'.$row["img"].'"><img src="img_tool/'.$row["img"].'" style="width: 100px;height: 150px;"></td>
-     <td><button type="button" class="btn btn-info"><a href="withdraw_material_num.php?code='.$row["code"].'">เบิก</a>
+     <td><button type="button" class="btn btn-info"><a href="withdraw_material_num.php?code='.$row["code"].'">เบิก</a></button></td>
    </tr>
   ';
  }

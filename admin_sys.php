@@ -128,8 +128,13 @@ require_once('navbar.php');
 <br>   รายงานทั้งหมด</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="report_tool.php">รายการอุปกรณ์/เครื่องมือ</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
+      <a class="dropdown-item" href="report_material.php">รายการวัสดุสิ้นเปลือง</a>
+      <a class="dropdown-item" href="report_notify_repair.php">รายการอุปรกรณ์ชำรุด</a>
+      <a class="dropdown-item" href="report_lend_tool.php">รายการยืม/คืน</a>
+      <a class="dropdown-item" href="report_withdraw_material.php">รายการเบิก</a>
+      <a class="dropdown-item" href="report_sell_tool.php">รายการจำหน่ายอุปกรณ์/เครื่องมือ</a>
+
+
     </div>
   </div>
   </div>

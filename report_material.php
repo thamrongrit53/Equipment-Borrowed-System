@@ -41,7 +41,7 @@ require_once('navbar.php');
     <div class="row">
        <div class="col-md-12">
             <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button> <h3 align="center">รายการอุปกรณ์/เครื่องมือ</h3><br />
+</button> <h3 align="center">รายการวัสดุสิ้นเปลือง</h3><br />
    <div class="form-group">
     <div class="input-group">
      <span class="input-group-addon">ค้นหา</span>

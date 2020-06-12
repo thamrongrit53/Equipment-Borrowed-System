@@ -41,7 +41,7 @@ require_once('navbar.php');
     <div class="row">
        <div class="col-md-12">
             <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button> <h3 align="center">รายการอุปกรณ์/เครื่องมือ ชำรุด</h3><br />
+</button> <h3 align="center">รายการจำหน่าย อุปกรณ์/เครื่องมือ</h3><br />
    <div class="form-group">
     <div class="input-group">
      <span class="input-group-addon">ค้นหา</span>
@@ -68,7 +68,7 @@ $(document).ready(function(){
  function load_data(query)
  {
   $.ajax({
-   url:"fetch_notify_repair_report.php",
+   url:"fetch_sell_tool_report.php",
    method:"POST",
    data:{query:query},
    success:function(data)
