@@ -49,36 +49,32 @@ $result = mysqli_query($condb,$query);
     <div class="col-md-12">
               <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
 </button>
-     <h3 align="center">บันทึกอุปกรณ์/เครื่องมือชำรุด</h3><br />
+     <h3 align="center">แจ้งซ่อมอุปกรณ์/เครื่องมือ</h3><br />
          <?php  while($row = mysqli_fetch_array($result))
       {
   ?>
-       <form action="repair_tool_notify_SQL.php?code=<?php echo $row["code"];?>" method="POST" enctype="multipart/form-data"> 
-  <label>ชื่อประเภท</label>
-      <input type="text" name="name_type" class="form-control" value="<?php echo $row["type_t"];?>"readonly>
-       <label>ชื่ออุปกรณ์</label>
-    <input type="text" name="name_tool" class="form-control" value="<?php echo $row["name_t"];?>"readonly>
-        <label>คำอธิบาย</label>
-    <textarea  name="detail_tool" class="form-control" value="" readonly><?php echo $row["detail"];?></textarea>
-      <label>code</label>
-    <input type="text" name="code_tool" class="form-control" value="<?php echo $row["code"];?>" readonly>
-    <label>จำนวน</label>
-    <input type="text" name="unit" class="form-control" value="<?php echo $row["unit"];?>" readonly>
-    <label>หน่วยนับ</label>
-     <input type="text" name="unit_num" class="form-control" value="<?php echo $row["m_unit"];?>" readonly>
-     <label>ราคาต่อหน่วย</label>
-     <input type="text" name="price" class="form-control" value="<?php echo $row["price"];?>" readonly>
-     <label>วันที่</label>
-     <input type="date" name="date_import" class="form-control" value="<?php echo $row["import_date"];?>"readonly>
-     <label>สถานที่เก็บ</label>
-     <input type="text" name="location" class="form-control" value="<?php echo $row["location"];?>"readonly>
+       <form action="notify_repair_tool_SQL.php" method="POST" enctype="multipart/form-data"> 
+     <label>code</label>
+      <input type="text" name="code" class="form-control" value="<?php echo $row["code"];?>"readonly>
+      <label>ชื่ออุปกรณ์</label>
+      <input type="text" name="name_t" class="form-control" value="<?php echo $row["name_t"];?>"readonly>
+      <label>จำนวนที่ส่งซ่อม</label>
+      <input type="text" name="unit_r" class="form-control">
+      <label>หน่วยนับ</label>
+      <input type="text" name="m_unit_m" class="form-control" value="<?php echo $row["m_unit"];?>"readonly>
+      <label>วันที่ส่งซ่อม</label>
+      <input type="date" name="date_sub" class="form-control">
+      <label>สถานที่ซ่อม</label>
+      <input type="text" name="location_r" class="form-control">
+      <label>เบอร์โทร</label>
+      <input type="text" name="tel" class="form-control">
+      <label>ชื่อผู้ส่งซ่อม</label>
+      <input type="text" name="name_u" class="form-control" value="<?php echo $_SESSION['name_u'];?>">
      <label>สถานะ</label>
-     <select class="form-control" name="status">
+     <select class="form-control" name="status_r">
         <option><?php echo $row["status"];?></option>
-              
-                                <option>ชำรุด</option>
-
-              </select>
+  <option>รอซ่อม</option>
+                </select>
       <label>รูป</label>
       <br>
       <img src="img_tool/<?php echo $row["img"];?>" style="width: 100px;height: 150px;">

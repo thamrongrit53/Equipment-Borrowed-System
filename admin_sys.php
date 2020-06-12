@@ -90,9 +90,7 @@ require_once('navbar.php');
                         <img src="img/png/company.png" style="width: 80px;height: 80px;">
 <br> ส่งซ่อมเครื่องมือ/อุปกรณ์ </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
+      <a class="dropdown-item" href="notify_repair_tool.php">แจ้งซ่อม</a>
     </div>
   </div>
     </div> 
@@ -103,9 +101,8 @@ require_once('navbar.php');
                        <img src="img/png/study.png" style="width: 80px;height: 80px;">
 <br> ปรับสถานะเครื่องมือ/อุปกรณ์ที่ซ่อมเสร็จแล้ว</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
+      <a class="dropdown-item" href="edit_repair_tool.php">ปรับสถานะ</a>
+  
     </div>
   </div>  
     </div> 
