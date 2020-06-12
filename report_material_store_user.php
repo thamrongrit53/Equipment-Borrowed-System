@@ -1,6 +1,6 @@
 <?php
-  require_once('condb.php');
- require_once('session_admin.php');
+require_once('condb.php');
+ require_once('session_manager.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,16 +36,16 @@ require_once('navbar.php');
 
 <div class="container" style="margin-top:50px">
   <div class="jumbotron">
-    <h1>Equipment Borrowed System(EBS)=>admin</h1>      
+    <h1>Equipment Borrowed System(EBS)=>manager</h1>      
   </div>  
     <div class="row">
        <div class="col-md-12">
-            <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
-</button> <h3 align="center">รายการจำหน่าย อุปกรณ์/เครื่องมือ</h3><br />
+            <button class="btn btn-warning"><a href="manager_sys.php"> กลับ-เมนู</a>
+</button> <h3 align="center">รายการวัสดุสิ้นเปลือง</h3><br />
    <div class="form-group">
     <div class="input-group">
      <span class="input-group-addon">ค้นหา</span>
-     <input type="text" name="search_text" id="search_text" placeholder="ประเภทอุปกรณ์" class="form-control" />
+     <input type="text" name="search_text" id="search_text" placeholder="ชื่อวัสดุสิ้นเปลือง" class="form-control" />
     </div>
    </div>
       <div id="result"></div>
@@ -53,6 +53,10 @@ require_once('navbar.php');
     </div>
     </div>
 </div>
+
+
+
+
  <footer class="py-4 bg-dark text-white-50" style="margin-top: 20px;">
     <div class="container text-center">
       <small>Copyright &copy; SBAC &nbsp;by &nbsp;ไม่นอน</small>
@@ -68,7 +72,7 @@ $(document).ready(function(){
  function load_data(query)
  {
   $.ajax({
-   url:"fetch_sell_tool_report.php",
+   url:"fetch_material_user.php",
    method:"POST",
    data:{query:query},
    success:function(data)
