@@ -113,9 +113,7 @@ require_once('navbar.php');
                         <img src="img/png/strategy.png" style="width: 80px;height: 80px;">
 <br>  จำหน่ายเครื่องมือ/อุปกรณ์</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-      <a class="dropdown-item" href="#">Link 3</a>
+      <a class="dropdown-item" href="sell_tool.php">จำหน่าย/อุปกรณ์</a>
     </div>
   </div>
     </div>  
