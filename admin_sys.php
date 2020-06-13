@@ -58,10 +58,6 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
   </div>  
 </div>
 <div class="container" style="margin-top: 20px;">
-  <div class="text-center"><h1>รายงาน</h1>
-    <h5>อัพเดทข้อมูลล่าสุด :<?php echo date("d-m-Y");  ?> </h5>
-  </div>
-
   <div class="row" style="margin-top: 20px;">
     <div class="col-sm-3">
     <div class="card bg-secondary text-white">
