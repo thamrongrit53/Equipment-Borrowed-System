@@ -53,11 +53,11 @@ $result = mysqli_query($condb,$query);
    ?>
         <form action="lend_tool_SQL_user.php" method="POST">
             <label>ชื่อผู้ยืม</label>
-            <input type="text" name="name_l" class="form-control"value="<?php echo $_SESSION['name_u'];?>">
+            <input type="text" name="name_l" class="form-control"value="<?php echo $_SESSION['name_u'];?>" readonly>
             <label>อีเมล</label>
-            <input type="text" name="email" class="form-control">
+            <input type="text" name="email" class="form-control" value="<?php echo $_SESSION['email'];?>" readonly>
             <label>เบอร์โทร</label>
-            <input type="text" name="tel" class="form-control">
+            <input type="text" name="tel" class="form-control" value="<?php echo $_SESSION['tel'];?>" readonly>
             <label>code</label>
             <input type="text" name="code" class="form-control"value="<?php echo $row["code"];?>" readonly>
              <label>ชื่ออุปกรณ์</label>

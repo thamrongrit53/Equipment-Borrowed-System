@@ -19,9 +19,12 @@
 			echo "$user and $phone Incorrect!";
 	}
 	else
-	{
+	{		
+			$_SESSION["email"] = $objResult["email"];
 			$_SESSION["name_u"] = $objResult["name_u"];
+			$_SESSION["tel"] = $objResult["tel"];
 			$_SESSION["status"] = $objResult["status"];
+
   			setcookie($username, md5($objResult["name_u"]), time() + (86400 * 30), "/");
 
 			if($objResult["status"] == "ADMIN")
