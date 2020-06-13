@@ -33,6 +33,23 @@ require_once('session_admin.php');
  <?php 
  //navbar
 require_once('navbar.php'); 
+
+  
+$query="SELECT COUNT(id_lend) AS num  FROM lend WHERE status_l='ยืม'";
+$result = mysqli_query($condb,$query);
+$objResult = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+$query1="SELECT COUNT(id_lend) AS num1  FROM lend WHERE status_l='คืน'";
+$result1 = mysqli_query($condb,$query1);
+$objResult1 = mysqli_fetch_array($result1,MYSQLI_ASSOC);
+
+$query2="SELECT COUNT(id_r) AS num2  FROM repair WHERE status_r!='ซ่อมเส็จแล้ว'";
+$result2 = mysqli_query($condb,$query2);
+$objResult2 = mysqli_fetch_array($result2,MYSQLI_ASSOC);
+
+$query3="SELECT COUNT(id_t) AS num3  FROM tb_tool WHERE status='ชำรุด'";
+$result3 = mysqli_query($condb,$query3);
+$objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
  ?>
 
 <div class="container" style="margin-top:50px">
@@ -40,8 +57,48 @@ require_once('navbar.php');
     <h1>Equipment Borrowed System(EBS)=>admin</h1>      
   </div>  
 </div>
+<div class="container" style="margin-top: 20px;">
+  <div class="text-center"><h1>รายงาน</h1>
+    <h5>อัพเดทข้อมูลล่าสุด :<?php echo date("d-m-Y");  ?> </h5>
+  </div>
 
-<div class="container" style="margin-bottom: 100px;">
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-sm-3">
+    <div class="card bg-secondary text-white">
+    <div class="card-body text-center">
+      <h2>ยืม</h2><br>
+       <h2><?php echo $objResult["num"]; ?></h2><br> 
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+    <div class="card bg-secondary text-white">
+    <div class="card-body text-center">
+        <h2>คืน</h2><br>
+       <h2><?php echo $objResult1["num1"]; ?></h2><br> 
+   </div>
+  </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card bg-secondary text-white">
+    <div class="card-body text-center">
+      <h2>รายการซ่อม</h2><br>
+      <h2><?php echo $objResult2["num2"]; ?></h2><br> 
+    </div>
+  </div>
+    </div>
+    <div class="col-sm-3">
+  <div class="card bg-secondary text-white">
+    <div class="card-body text-center">
+      <h2>ชำรุด</h2><br>
+        <h2><?php echo $objResult3["num3"]; ?></h2><br> 
+    </div>
+  </div>
+    </div>
+  </div>
+
+</div>
+<div class="container" style="margin-bottom: 20px;">
   <div class="row" style="margin-top: 20px;">
     <div class="col-md-4"> 
     <div class="dropdown"> 
