@@ -22,6 +22,13 @@ require_once('session_user.php');
    color: white;
    text-align: center;
 }
+button{
+      width: 350px;
+      height: 200px;
+    }
+    a{
+      color:#000000;
+    }
   </style>
 </head>
 <body style="height:1500px; font-family: 'K2D', sans-serif;">
@@ -32,13 +39,36 @@ require_once('navbar.php');
 
 <div class="container" style="margin-top:50px">
   <div class="jumbotron">
-    <h1>Equipment Borrowed System(EBS)=>member</h1>      
+    <h1>Equipment Borrowed System(EBS)=>user</h1>      
   </div>  
-  <div class="row">
-   <div class="col-md-12">
-     
-   </div>
+   <div class="row" style="margin-top: 20px;">
+    <div class="col-md-4"> 
+            <div class="dropdown">
+ 
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    <img src="img/png/test.png" style="width: 80px;height: 80px;">
+<br>  ยืม/คืน/เบิกวัสดุ</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="lend_user.php">ยืม</a>
+      <a class="dropdown-item" href="return_user.php">คืน</a>
+      <a class="dropdown-item" href="withdraw_material_user.php">เบิกวัสดุ</a>
+    </div>
   </div>
+    </div> 
+    <div class="col-md-4"> 
+    <button type="button" class="btn btn-warning ">
+  <a  href="notify_repair_tool_user.php">                   
+     <img src="img/png/company.png" style="width: 80px;height: 80px;">
+<br>แจ้งซ่อม</a></button>
+    </div> 
+     <div class="col-md-4"> 
+    <button type="button" class="btn btn-warning ">
+       <a  href="repair_tool_user.php">                
+        <img src="img/png/study1.png" style="width: 80px;height: 80px;">
+<br>แจ้งอุปกรณ์ชำรุด</a></button>
+ </div>
+ </div>
+ 
 </div>
  <footer class="py-4 bg-dark text-white-50" style="margin-top: 20px;">
     <div class="container text-center">

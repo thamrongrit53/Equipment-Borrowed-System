@@ -46,7 +46,7 @@
   			<label>ผู้ใช้งาน</label>
   			<input type="text" name="username" class="form-control">
   			<label>เบอร์โทรศัพท์</label><br>
-  			<input type="text" name="phonenumber" class="form-control">
+  			<input type="password" name="phonenumber" class="form-control">
   			<button class="btn btn-primary" type="submit" style="margin-top: 20px;">เข้าสู่ระบบ</button>
   		</form>
   	</div>
