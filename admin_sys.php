@@ -15,6 +15,7 @@ require_once('session_admin.php');
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=K2D:wght@700&display=swap"rel="stylesheet">
   <style type="text/css">
+
    footer {
    position: fixed;
    left: 0;
@@ -27,6 +28,8 @@ require_once('session_admin.php');
       width: 350px;
       height: 200px;
     }
+
+
   </style>
 </head>
 <body style="height:1500px; font-family: 'K2D', sans-serif;">
@@ -60,7 +63,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
 <div class="container" style="margin-top: 20px;">
   <div class="row" style="margin-top: 20px;">
     <div class="col-sm-3">
-    <div class="card bg-secondary text-white">
+    <div class="card bg-info text-white" style="border-radius: 20px;">
     <div class="card-body text-center">
       <h2>ยืม</h2><br>
        <h2><?php echo $objResult["num"]; ?></h2><br> 
@@ -68,7 +71,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
       </div>
     </div>
     <div class="col-sm-3">
-    <div class="card bg-secondary text-white">
+    <div class="card bg-info text-white"style="border-radius: 20px;">
     <div class="card-body text-center">
         <h2>คืน</h2><br>
        <h2><?php echo $objResult1["num1"]; ?></h2><br> 
@@ -76,7 +79,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
   </div>
     </div>
     <div class="col-sm-3">
-      <div class="card bg-secondary text-white">
+      <div class="card bg-info text-white"style="border-radius: 20px;">
     <div class="card-body text-center">
       <h2>รายการซ่อม</h2><br>
       <h2><?php echo $objResult2["num2"]; ?></h2><br> 
@@ -84,7 +87,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
   </div>
     </div>
     <div class="col-sm-3">
-  <div class="card bg-secondary text-white">
+  <div class="card bg-info text-white"style="border-radius: 20px;">
     <div class="card-body text-center">
       <h2>ชำรุด</h2><br>
         <h2><?php echo $objResult3["num3"]; ?></h2><br> 
@@ -99,7 +102,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
     <div class="col-md-4"> 
     <div class="dropdown"> 
 
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
          <img src="img/png/designer.png" style="width: 80px;height: 80px;">
 <br>ให้สิทธิ์การใช้งาน
     </button>
@@ -111,7 +114,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
     </div> 
      <div class="col-md-4">  
           <div class="dropdown">
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">   
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">   
       <img src="img/png/inventory.png" style="width: 80px;height: 80px;">
 <br>
     บันทึกข้อมูล/จำนวนเครื่องมือ/วัสดุสิ้นเปลือง</button>
@@ -126,7 +129,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
      <div class="col-md-4"> 
              <div class="dropdown">
  
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                        <img src="img/png/study1.png" style="width: 80px;height: 80px;">
 <br>บันทึกอุปกรณ์ชำรุด</button>
     <div class="dropdown-menu">
@@ -139,7 +142,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
     <div class="col-md-4">  
               <div class="dropdown">
 
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                         <img src="img/png/company.png" style="width: 80px;height: 80px;">
 <br> ส่งซ่อมเครื่องมือ/อุปกรณ์ </button>
     <div class="dropdown-menu">
@@ -150,7 +153,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
      <div class="col-md-4">
              <div class="dropdown">
 
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                        <img src="img/png/study.png" style="width: 80px;height: 80px;">
 <br> ปรับสถานะเครื่องมือ/อุปกรณ์ที่ซ่อมเสร็จแล้ว</button>
     <div class="dropdown-menu">
@@ -162,7 +165,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
      <div class="col-md-4">  
               <div class="dropdown">
 
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                         <img src="img/png/strategy.png" style="width: 80px;height: 80px;">
 <br>  จำหน่ายเครื่องมือ/อุปกรณ์</button>
     <div class="dropdown-menu">
@@ -176,7 +179,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
   <div class="col-md-4">
             <div class="dropdown">
  
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                     <img src="img/png/work.png" style="width: 80px;height: 80px;">
 <br>   รายงานทั้งหมด</button>
     <div class="dropdown-menu">
@@ -195,7 +198,7 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
     <div class="col-md-4">
             <div class="dropdown">
  
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                     <img src="img/png/test.png" style="width: 80px;height: 80px;">
 <br>  ยืม/คืน/เบิกวัสดุ</button>
     <div class="dropdown-menu">
