@@ -1,13 +1,15 @@
 <?php
 require_once('condb.php');
 require_once('session_admin.php');
+
+
  $output = '';
   mysqli_set_charset($condb,"utf8");
   if(isset($_POST["query"]))
 { 
  $search = mysqli_real_escape_string($condb, $_POST["query"]);
  $query = "
-  SELECT * FROM tb_tool WHERE type_t!='วัสดุสิ้นเปลือง'AND type_t LIKE '%".$search."%'";
+  SELECT * FROM tb_tool WHERE type_t!='วัสดุสิ้นเปลือง'AND code LIKE '%".$search."%'";
 }
 else
 {
@@ -17,6 +19,7 @@ $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)
 {
  $output .= '
+            <a href="export_tool_excel.php?act=excel" class="btn btn-success"> Export->Excel </a>
   <div class="table-responsive">
    <table class="table table bordered">
     <tr>
@@ -49,6 +52,7 @@ if(mysqli_num_rows($result) > 0)
    </tr>
   ';
  }
+
  echo $output;
 }
 else

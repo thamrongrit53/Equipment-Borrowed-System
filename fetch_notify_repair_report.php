@@ -7,7 +7,7 @@ require_once('session_admin.php');
 { 
  $search = mysqli_real_escape_string($condb, $_POST["query"]);
  $query = "
-  SELECT * FROM tb_tool WHERE atus='ชำรุด'AND type_t LIKE '%".$search."%'";
+  SELECT * FROM tb_tool WHERE status='ชำรุด'AND code LIKE '%".$search."%'";
 }
 else
 {
@@ -17,6 +17,7 @@ $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)
 {
  $output .= '
+  <a href="export_notify_re_excel.php?act=excel" class="btn btn-success"> Export->Excel </a>
   <div class="table-responsive">
    <table class="table table bordered">
     <tr>

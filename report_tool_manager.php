@@ -45,7 +45,7 @@ require_once('navbar.php');
    <div class="form-group">
     <div class="input-group">
      <span class="input-group-addon">ค้นหา</span>
-     <input type="text" name="search_text" id="search_text" placeholder="ประเภทอุปกรณ์" class="form-control" />
+     <input type="text" name="search_text" id="search_text" placeholder="code" class="form-control" />
     </div>
    </div>
       <div id="result"></div>

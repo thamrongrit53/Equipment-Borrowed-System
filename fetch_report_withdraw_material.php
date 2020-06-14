@@ -17,6 +17,7 @@ $result = mysqli_query($condb,$query);
 if(mysqli_num_rows($result) > 0)
 {
  $output .= '
+  <a href="export_withdraw_excel.php?act=excel" class="btn btn-success"> Export->Excel </a>
   <div class="table-responsive">
    <table class="table table bordered">
     <tr>

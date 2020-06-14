@@ -7,7 +7,7 @@ require_once('session_manager.php');
 { 
  $search = mysqli_real_escape_string($condb, $_POST["query"]);
  $query = "
-  SELECT * FROM tb_tool WHERE type_t='วัสดุสิ้นเปลือง'AND type_t LIKE '%".$search."%'";
+  SELECT * FROM tb_tool WHERE type_t='วัสดุสิ้นเปลือง'AND code LIKE '%".$search."%'";
 }
 else
 {

@@ -7,7 +7,7 @@ require_once('session_user.php');
 { 
  $search = mysqli_real_escape_string($condb, $_POST["query"]);
  $query = "
-  SELECT * FROM tb_tool WHERE type_t LIKE '%".$search."%'";
+  SELECT * FROM tb_tool WHERE code LIKE '%".$search."%'";
 }
 else
 {

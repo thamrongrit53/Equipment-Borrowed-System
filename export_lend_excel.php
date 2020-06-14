@@ -1,23 +1,15 @@
-<?php
+<?php  
+//export.php  
 require_once('condb.php');
 require_once('session_admin.php');
- $output = '';
-  mysqli_set_charset($condb,"utf8");
-  if(isset($_POST["query"]))
-{ 
- $search = mysqli_real_escape_string($condb, $_POST["query"]);
- $query = "
-  SELECT * FROM lend WHERE code LIKE '%".$search."%'";
-}
-else
-{
+
+$output = '';
+
  $query = "SELECT * FROM lend  ORDER BY id_lend DESC";
-}
-$result = mysqli_query($condb,$query);
-if(mysqli_num_rows($result) > 0)
-{
- $output .= '
-   <a href="export_lend_excel.php?act=excel" class="btn btn-success"> Export->Excel </a>
+ $result = mysqli_query($condb, $query);
+ if(mysqli_num_rows($result) > 0){
+ 
+$output .= '
   <div class="table-responsive">
    <table class="table table bordered">
     <tr>
@@ -51,12 +43,16 @@ if(mysqli_num_rows($result) > 0)
    </tr>
   ';
  }
- echo $output;
-}
-else
-{
- echo 'ไมพบข้อมูล';
-}
+  $output .= '</table>';
+header("Content-Type: application/vnd.ms-excel"); // ประเภทของไฟล์
+header('Content-Disposition: attachment; filename=report_lend_re.xls');
+header("Content-Type: application/force-download"); // กำหนดให้ถ้าเปิดหน้านี้ให้ดาวน์โหลดไฟล์
+header("Content-Type: application/octet-stream"); 
+header("Content-Type: application/download"); // กำหนดให้ถ้าเปิดหน้านี้ให้ดาวน์โหลดไฟล์
+header("Content-Transfer-Encoding: binary"); 
+header("Content-Length: ".filesize("report_lend_re.xls"));   
+ 
+  echo $output;
+ }
 
 ?>
-
