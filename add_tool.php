@@ -54,8 +54,14 @@ $result2 = mysqli_query($condb,$query2);
 </button>
      <h3 align="center">เพิ่มอุปกรณ์และวัสดุสิ้นเปลือง</h3><br />
        <form action="add_tool_SQL.php" method="POST" enctype="multipart/form-data">
+        <label>ประเภทวัสดุ</label>
+            <select class="form-control" name="name_type">
+              <option>วัสดุสิ้นเปลือง</option>
+              <option>เครื่องมือ/อุปกรณ์</option>
+              </select>
+
   <label>ประเภท</label>
-    <select class="form-control" name="name_type">
+    <select class="form-control" name="type">
       <?php  while($row = mysqli_fetch_array($result))
       {
   ?>
@@ -65,6 +71,7 @@ $result2 = mysqli_query($condb,$query2);
     }
     ?>
               </select>
+
               <label>หมวดหมู่</label>
     <select class="form-control" name="cat">
       <?php  while($row1 = mysqli_fetch_array($result1))

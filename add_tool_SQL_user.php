@@ -1,10 +1,13 @@
 <?php
 require_once('condb.php');
-require_once('session_manager.php');
+require_once('session_admin.php');
 
 mysqli_set_charset($condb,"utf8");
 
 $name_type = $_POST['name_type'];
+$cat = $_POST['cat'];
+$type=$_POST['type'];
+
 $name_tool = $_POST['name_tool'];
 $detail_tool=$_POST['detail_tool'];
 $code_tool=$_POST['code_tool'];
@@ -21,17 +24,22 @@ $target = "img_tool/".basename($image);
      }else{
         $msg = "Failed to upload image";
      }
+
+$query1 = "SELECT id_cat FROM `cat_tool` WHERE cat='$cat'";
+$result1 = mysqli_query($condb,$query1);
+$id_c = mysqli_fetch_array($result1);
+
 $query = "SELECT id_type FROM `type_tool` WHERE type_t='$name_type'";
 $result = mysqli_query($condb,$query);
-$id_code = mysqli_fetch_array($result);
-$encode=$id_code["id_type"]."-".$code_tool;
+$id_t = mysqli_fetch_array($result);
+$encode=$id_t["id_type"]."-".$id_c["id_cat"]."-".$code_tool;
 
- $sql="INSERT INTO `tb_tool`(`name_t`,detail,code,type_t,unit,m_unit,price,import_date,location,status,img)VALUES('$name_tool','$detail_tool','$encode','$name_type','$unit','$unit_num','$price','$date_import','$location','$status','$image')";
+ $sql="INSERT INTO `tb_tool`(`name_t`,detail,code,type_t,type,cat,unit,m_unit,price,import_date,location,status,img)VALUES('$name_tool','$detail_tool','$encode','$name_type','$type','$cat','$unit','$unit_num','$price','$date_import','$location','$status','$image')";
   $query=mysqli_query($condb,$sql);   
-	if ($query){
+  if ($query){
      header("location:add_tool_user.php");
-      			}else{
+            }else{
      header("location:error_process.php");
-      			}
+            }
      
 ?>
