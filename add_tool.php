@@ -44,18 +44,33 @@ require_once('navbar.php');
   mysqli_set_charset($condb,"utf8");
  $query = "SELECT * FROM `type_tool`  ORDER BY id_type DESC";
 $result = mysqli_query($condb,$query);
+ $query1 = "SELECT * FROM `cat_tool`  ORDER BY id_cat DESC";
+$result1 = mysqli_query($condb,$query1);
+ $query2 = "SELECT * FROM `location`  ORDER BY id_lo DESC";
+$result2 = mysqli_query($condb,$query2);
    ?>
     <div class="col-md-12">
               <button class="btn btn-warning"><a href="admin_sys.php"> กลับ-เมนู</a>
 </button>
      <h3 align="center">เพิ่มอุปกรณ์และวัสดุสิ้นเปลือง</h3><br />
        <form action="add_tool_SQL.php" method="POST" enctype="multipart/form-data">
-  <label>ชื่อประเภท</label>
+  <label>ประเภท</label>
     <select class="form-control" name="name_type">
       <?php  while($row = mysqli_fetch_array($result))
       {
   ?>
           <option><?php echo $row["type_t"];?></option>
+          
+   <?php 
+    }
+    ?>
+              </select>
+              <label>หมวดหมู่</label>
+    <select class="form-control" name="cat">
+      <?php  while($row1 = mysqli_fetch_array($result1))
+      {
+  ?>
+          <option><?php echo $row1["cat"];?></option>
           
    <?php 
     }
@@ -70,13 +85,27 @@ $result = mysqli_query($condb,$query);
     <label>จำนวน</label>
     <input type="text" name="unit" class="form-control">
     <label>หน่วยนับ</label>
-     <input type="text" name="unit_num" class="form-control">
+ <select class="form-control" name="unit_num">
+                <option>อัน</option>
+                <option>ชิ้น</option>
+                <option>ด้าม</option>
+                <option>กล่อง</option>
+              </select>
      <label>ราคาต่อหน่วย</label>
      <input type="text" name="price" class="form-control">
      <label>วันที่</label>
      <input type="date" name="date_import" class="form-control">
      <label>สถานที่เก็บ</label>
-     <input type="text" name="location" class="form-control">
+        <select class="form-control" name="location">
+      <?php  while($row2 = mysqli_fetch_array($result2))
+      {
+  ?>
+          <option><?php echo $row2["location"];?></option>
+          
+   <?php 
+    }
+    ?>
+     </select>
      <label>สถานะ</label>
      <select class="form-control" name="status">
                 <option>พร้อมใช้</option>

@@ -119,7 +119,9 @@ $objResult3 = mysqli_fetch_array($result3,MYSQLI_ASSOC);
 <br>
     บันทึกข้อมูล/จำนวนเครื่องมือ/วัสดุสิ้นเปลือง</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="add_type_tool.php">เพิ่มชื่อประเภท/หมวดหมู่</a>
+      <a class="dropdown-item" href="add_type_tool.php">เพิ่มชื่อประเภท</a>
+      <a class="dropdown-item" href="add_category_tool.php">เพิ่มหมวดหมู่</a>
+      <a class="dropdown-item" href="add_location_tool.php">เพิ่มสถานที่เก็บ</a>
       <a class="dropdown-item" href="add_tool.php">เพิ่มรายการอุปกรณ์ใหม่/วัสดุสิ้นเปลือง</a>
       <a class="dropdown-item" href="report_material_store.php">แก้ไขข้อมูลวัสดุสิ้นเปลือง</a>
       <a class="dropdown-item" href="report_tool_store.php">แก้ไขข้อมูลอุปกรณ์</a>
